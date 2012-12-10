@@ -107,7 +107,16 @@ by Prelude.")
   (message "Loading personal configuration files in %s..." prelude-personal-dir)
   (mapc 'load (directory-files prelude-personal-dir 't "^[^#].*el$")))
 
-(message "Prelude is ready to do thy bidding, Master %s!" current-user)
+(message "Prelude is ready to do thy bidding, Master %s!" (getenv "USER"))
+
+(add-to-list
+ 'load-path
+   (car (file-expand-wildcards "/home/pawel/bin/erlang/R16B01/lib/tools-*/emacs")))
+
+(add-to-list 'load-path "/home/pawel/bin/distel/elisp")
+(require 'distel)
+(distel-setup)
+
 
 (prelude-eval-after-init
  ;; greet the use with some useful tip
