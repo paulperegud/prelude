@@ -102,11 +102,7 @@ Will only occur if prelude-whitespace is also enabled."
                                          try-complete-lisp-symbol))
 
 ;; smart pairing for all
-(require 'smartparens-config)
-(setq sp-base-key-bindings 'paredit)
-(setq sp-autoskip-closing-pair 'always)
-(sp-use-paredit-bindings)
-(smartparens-global-mode +1)
+(electric-pair-mode t)
 
 ;; diminish keeps the modeline tidy
 (require 'diminish)

@@ -33,7 +33,6 @@
 ;;; Code:
 
 (prelude-ensure-module-deps '(auctex))
-(require 'smartparens-latex)
 
 ;; AUCTeX configuration
 (setq TeX-auto-save t)
