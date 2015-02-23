@@ -295,12 +295,6 @@ The body of the advice is in BODY."
     ;; fall back to helm mini if an error occurs (usually in projectile-project-root)
     (error (helm-mini))))
 
-;; shorter aliases for ack-and-a-half commands
-(defalias 'ack 'ack-and-a-half)
-(defalias 'ack-same 'ack-and-a-half-same)
-(defalias 'ack-find-file 'ack-and-a-half-find-file)
-(defalias 'ack-find-file-same 'ack-and-a-half-find-file-same)
-
 ;; dired - reuse current buffer by pressing 'a'
 (put 'dired-find-alternate-file 'disabled nil)
 
